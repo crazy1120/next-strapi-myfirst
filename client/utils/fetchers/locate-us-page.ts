@@ -5,6 +5,7 @@ import { SERVER_API_URL } from "../constants";
 export const locateDataFetcher = async (): Promise<any> => {
   const query = qs.stringify({
     populate: [
+      "title",
       "hero.image",
       "offices.items",
       "retailStores.items",
