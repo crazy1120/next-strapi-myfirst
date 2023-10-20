@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "components_pages",
+  "info": {
+    "singularName": "components-page",
+    "pluralName": "components-pages",
+    "displayName": "ComponentsPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "white_camera_only": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.component-part"
+    },
+    "white_hat_girl": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.component-part"
+    },
+    "purple_camera_only": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.component-part"
+    },
+    "purple_hand_camera": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.component-part"
+    }
+  }
+}
