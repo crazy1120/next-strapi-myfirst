@@ -764,6 +764,8 @@ export interface ApiContactPageContactPage extends Schema.SingleType {
     supportItems: Attribute.Component<'section.single-part', true>;
     liveSupport: Attribute.RichText;
     enquiries: Attribute.Component<'section.rich-text-block-part', true>;
+    title: Attribute.String & Attribute.Required;
+    desc: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -835,6 +837,8 @@ export interface ApiLocatePageLocatePage extends Schema.SingleType {
     resellers: Attribute.Component<'section.category-group-part'>;
     marketPlace: Attribute.Component<'section.rich-text-block-part'>;
     onlineStore: Attribute.Component<'section.rich-text-block-part'>;
+    title: Attribute.String & Attribute.Required;
+    desc: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

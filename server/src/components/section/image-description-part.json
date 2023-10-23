@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_image_description_parts",
+  "info": {
+    "displayName": "story-item-part",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "textLeft": {
+      "type": "boolean",
+      "default": true
+    },
+    "desc": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
