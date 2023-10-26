@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_rich_text_block_parts",
+  "info": {
+    "displayName": "rich-text-block-part",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    }
+  }
+}

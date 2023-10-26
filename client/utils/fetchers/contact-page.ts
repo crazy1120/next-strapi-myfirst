@@ -5,6 +5,7 @@ import { SERVER_API_URL } from "../constants";
 export const contactDataFetcher = async (): Promise<any> => {
   const query = qs.stringify({
     populate: [
+      "title",
       "hero.image",
       "liveSupport",
       "supportItems.image",

@@ -6,6 +6,7 @@ declare type Image = {
       width: number;
       height: number;
       alternativeText: string;
+      caption: string;
     };
   };
 };

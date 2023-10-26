@@ -209,6 +209,36 @@
   }
 }
 
+.rich-text_mb-20 {
+  margin-bottom: 20px;
+  p, ul {
+    margin-bottom: 20px;
+  }
+}
+
+.rich-text_mb-10 {
+  margin-bottom: 10px;
+  p, ul {
+    margin-bottom: 10px;
+  }
+}
+
+.enquiries {
+  p {
+    &:nth-child(even) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.list-style-disc ul li {
+  list-style-type: disc!important;
+}
+
+.markdown-list ul {
+  padding-left: 25px;
+}
+
 /****************************** FOOTER STYLE ******************************/
 .footer-submenu {
   li {

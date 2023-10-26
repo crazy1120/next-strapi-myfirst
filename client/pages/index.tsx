@@ -1,31 +1,13 @@
 import { GetStaticProps } from "next";
 
 import Layout from "@/components/layout";
+import { Blocks, Blogs, Heroes } from "@/components/landing";
 import {
   blockDatasFetcher,
   blogDatasFetcher,
   heroDatasFetcher,
   metaDataFetcher,
 } from "@/utils/fetchers/landing-page";
-import { Blocks, Blogs, Heroes } from "@/components/landing";
-
-export interface heroesAndBlocks {
-  id: number;
-  title: string;
-  desc: string;
-  link: string;
-  link_text: string;
-  image: Image;
-}
-
-export interface blogs {
-  id: number;
-  title: string;
-  desc: string;
-  link: string;
-  date: string;
-  image: Image;
-}
 
 const LandingPage = ({
   pageMetaData,
@@ -37,9 +19,9 @@ const LandingPage = ({
     title: string;
     desc: string;
   };
-  heroesData: heroesAndBlocks[];
-  blocksData: heroesAndBlocks[];
-  blogsData: blogs[];
+  heroesData: HeroesAndBlocks[];
+  blocksData: HeroesAndBlocks[];
+  blogsData: BlogComponent[];
 }) => {
   const { title } = pageMetaData;
   return (
