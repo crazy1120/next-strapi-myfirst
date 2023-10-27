@@ -677,133 +677,57 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutPageAboutPage extends Schema.SingleType {
-  collectionName: 'about_pages';
-  info: {
-    singularName: 'about-page';
-    pluralName: 'about-pages';
-    displayName: 'AboutPage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    storyItems: Attribute.Component<'section.image-description-part', true>;
-    hero: Attribute.Component<'section.single-part'>;
-    explore: Attribute.Component<'section.explore-part'>;
-    story: Attribute.Component<'section.rich-text-block-part'>;
-    mission: Attribute.Component<'section.rich-text-block-part'>;
-    title: Attribute.String & Attribute.Required;
-    desc: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::about-page.about-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::about-page.about-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiComponentsPageComponentsPage extends Schema.SingleType {
-  collectionName: 'components_pages';
-  info: {
-    singularName: 'components-page';
-    pluralName: 'components-pages';
-    displayName: 'ComponentsPage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    white_camera_only: Attribute.Component<'section.component-part'>;
-    white_hat_girl: Attribute.Component<'section.component-part'>;
-    purple_camera_only: Attribute.Component<'section.component-part'>;
-    purple_hand_camera: Attribute.Component<'section.component-part'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::components-page.components-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::components-page.components-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiContactPageContactPage extends Schema.SingleType {
-  collectionName: 'contact_pages';
-  info: {
-    singularName: 'contact-page';
-    pluralName: 'contact-pages';
-    displayName: 'ContactPage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    hero: Attribute.Component<'section.single-part'>;
-    supportItems: Attribute.Component<'section.single-part', true>;
-    liveSupport: Attribute.RichText;
-    enquiries: Attribute.Component<'section.rich-text-block-part', true>;
-    title: Attribute.String & Attribute.Required;
-    desc: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::contact-page.contact-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::contact-page.contact-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiLandingPageLandingPage extends Schema.SingleType {
   collectionName: 'landing_pages';
   info: {
     singularName: 'landing-page';
     pluralName: 'landing-pages';
-    displayName: 'LandingPage';
+    displayName: 'landing-page';
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
-    heroes: Attribute.Component<'section.single-part', true> &
-      Attribute.Required;
-    blocks: Attribute.Component<'section.single-part', true> &
-      Attribute.Required;
-    blogs: Attribute.Component<'section.blog-part', true> & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
+    page_title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    page_desc: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroes_section: Attribute.Component<'components.unit-component', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    blogs_section: Attribute.Component<'components.blog-component', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    products_section: Attribute.Component<'components.unit-component', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::landing-page.landing-page',
       'oneToOne',
@@ -816,76 +740,58 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::landing-page.landing-page',
+      'oneToMany',
+      'api::landing-page.landing-page'
+    >;
+    locale: Attribute.String;
   };
 }
 
-export interface ApiLocatePageLocatePage extends Schema.SingleType {
-  collectionName: 'locate_pages';
+export interface ApiPostPost extends Schema.CollectionType {
+  collectionName: 'posts';
   info: {
-    singularName: 'locate-page';
-    pluralName: 'locate-pages';
-    displayName: 'LocatePage';
+    singularName: 'post';
+    pluralName: 'posts';
+    displayName: 'Post';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    hero: Attribute.Component<'section.single-part'>;
-    offices: Attribute.Component<'section.category-group-part'>;
-    retailStores: Attribute.Component<'section.category-group-part'>;
-    resellers: Attribute.Component<'section.category-group-part'>;
-    marketPlace: Attribute.Component<'section.rich-text-block-part'>;
-    onlineStore: Attribute.Component<'section.rich-text-block-part'>;
-    title: Attribute.String & Attribute.Required;
-    desc: Attribute.Text;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cover: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::locate-page.locate-page',
-      'oneToOne',
-      'admin::user'
-    > &
+    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::locate-page.locate-page',
-      'oneToOne',
-      'admin::user'
-    > &
+    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-  };
-}
-
-export interface ApiPrivacyPolicyPagePrivacyPolicyPage
-  extends Schema.SingleType {
-  collectionName: 'privacy_policy_pages';
-  info: {
-    singularName: 'privacy-policy-page';
-    pluralName: 'privacy-policy-pages';
-    displayName: 'PrivacyPolicyPage';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    desc: Attribute.RichText & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::privacy-policy-page.privacy-policy-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::privacy-policy-page.privacy-policy-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::post.post',
+      'oneToMany',
+      'api::post.post'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -905,12 +811,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::about-page.about-page': ApiAboutPageAboutPage;
-      'api::components-page.components-page': ApiComponentsPageComponentsPage;
-      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
-      'api::locate-page.locate-page': ApiLocatePageLocatePage;
-      'api::privacy-policy-page.privacy-policy-page': ApiPrivacyPolicyPagePrivacyPolicyPage;
+      'api::post.post': ApiPostPost;
     }
   }
 }

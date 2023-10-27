@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState, ReactNode } from "react";
-import { toggleActiveClass } from "@/utils";
+import { toggleActiveClass } from "@/utils/microFunctions";
 
 interface NavbarSubmenuProps {
   title: string;

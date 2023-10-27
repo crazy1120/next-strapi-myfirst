@@ -10,6 +10,7 @@ export { default as WatchPhone } from "./watchphone";
 
 // Link Component only for Navbar
 export { default as Subscription } from "./subscription";
+export { default as Language } from "./lang";
 
 // Link Components only for Footer
 export { default as StayConnected } from "./stay-connected";

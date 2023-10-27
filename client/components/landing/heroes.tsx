@@ -1,10 +1,9 @@
-import { heroesAndBlocks } from "@/pages";
 import { useSelector } from "react-redux";
 
 import Hero from "./hero";
 
 interface HeroesProps {
-  heroes: heroesAndBlocks[];
+  heroes: LinkDescComponent[];
 }
 
 const Heroes: React.FC<HeroesProps> = ({ heroes }) => {

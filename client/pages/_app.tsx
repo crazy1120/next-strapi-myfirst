@@ -1,6 +1,9 @@
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
+import { ApolloProvider } from "@apollo/react-hooks";
 import { Provider as StoreProvider } from "react-redux";
 
+import client from "@/utils/fetchers";
 import store from "@/utils/store";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/styles/styles.scss";
@@ -8,10 +11,12 @@ import "@/styles/globals.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <StoreProvider store={store}>
-      <Component {...pageProps} />
-    </StoreProvider>
+    <ApolloProvider client={client}>
+      <StoreProvider store={store}>
+        <Component {...pageProps} />
+      </StoreProvider>
+    </ApolloProvider>
   );
 };
 
-export default App;
+export default appWithTranslation(App);

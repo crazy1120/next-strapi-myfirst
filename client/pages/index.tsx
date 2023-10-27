@@ -1,47 +1,48 @@
-import { GetStaticProps } from "next";
+import { ReactNode } from "react";
+import { GetServerSideProps, NextPage } from "next";
+import { useRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import Query from "@/components/query";
+import { LANDING_PAGE_QUERY } from "@/utils/fetchers";
 import Layout from "@/components/layout";
-import { Blocks, Blogs, Heroes } from "@/components/landing";
-import {
-  blockDatasFetcher,
-  blogDatasFetcher,
-  heroDatasFetcher,
-  metaDataFetcher,
-} from "@/utils/fetchers/landing-page";
+import { Blogs, Heroes, Products } from "@/components/landing";
+import { COMMON } from "@/utils/constants";
 
-const LandingPage = ({
-  pageMetaData,
-  heroesData,
-  blocksData,
-  blogsData,
-}: {
-  pageMetaData: {
-    title: string;
-    desc: string;
-  };
-  heroesData: HeroesAndBlocks[];
-  blocksData: HeroesAndBlocks[];
-  blogsData: BlogComponent[];
-}) => {
-  const { title } = pageMetaData;
+type LandingPageProps = PageMetaData & {
+  heroes_section: LinkDescComponent[];
+} & { products_section: LinkDescComponent[] } & {
+  blogs_section: BlogComponent[];
+};
+
+const LandingPage: NextPage = () => {
+  const { locale } = useRouter();
+
   return (
-    <Layout title={title}>
-      <Heroes heroes={heroesData} />
-      <Blocks blocks={blocksData} />
-      <Blogs blogs={blogsData} />
-    </Layout>
+    <Query query={LANDING_PAGE_QUERY({ locale })}>
+      {({
+        data,
+      }: {
+        data: { landingPage: { data: { attributes: LandingPageProps } } };
+      }): ReactNode => {
+        const props = data.landingPage.data.attributes;
+
+        return (
+          <Layout title={props.page_title}>
+            <Heroes heroes={props.heroes_section} />
+            <Products products={props.products_section} />
+            <Blogs blogs={props.blogs_section} />
+          </Layout>
+        );
+      }}
+    </Query>
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const metaData = await metaDataFetcher();
-  const heroesData = await heroDatasFetcher();
-  const blocksData = await blockDatasFetcher();
-  const blogsData = await blogDatasFetcher();
-
-  return {
-    props: { pageMetaData: metaData, heroesData, blocksData, blogsData },
-  };
-};
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale!, [COMMON])),
+  },
+});
 
 export default LandingPage;

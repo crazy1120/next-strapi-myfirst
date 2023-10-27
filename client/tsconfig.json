@@ -17,6 +17,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/query.ts", "pages/index.tsx", "next.config.js", "postcss.config.js"],
   "exclude": ["node_modules"]
 }

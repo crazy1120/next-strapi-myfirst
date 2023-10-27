@@ -1,33 +1,61 @@
-// API request fetcher for landing page contents
-// Need to improve to make only a single api request
-import { SERVER_API_URL } from "../constants";
+import gql from "graphql-tag";
 
-export const metaDataFetcher = async (): Promise<any> => {
-  const serverRes = await fetch(`${SERVER_API_URL}/landing-page?field=title`);
-  const { data } = await serverRes.json();
-  return data.attributes;
-};
+const QUERY = ({ locale }: Locale) => gql`
+  query {
+    landingPage(locale:"${locale}") {
+      data {
+        attributes {
+          page_title
+          page_desc
+          heroes_section {
+            title
+            desc
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            mobile_image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            link
+            link_text
+          }
+          products_section {
+            title
+            desc
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            link
+            link_text
+          }
+          blogs_section {
+            title
+            date
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            link
+          }
+        }
+      }
+    }
+  }
+`;
 
-export const heroDatasFetcher = async (): Promise<any> => {
-  const serverRes = await fetch(
-    `${SERVER_API_URL}/landing-page?populate[0]=heroes&populate[1]=heroes.image`
-  );
-  const { data } = await serverRes.json();
-  return data.attributes.heroes;
-};
-
-export const blockDatasFetcher = async (): Promise<any> => {
-  const serverRes = await fetch(
-    `${SERVER_API_URL}/landing-page?populate[0]=blocks&populate[1]=blocks.image`
-  );
-  const { data } = await serverRes.json();
-  return data.attributes.blocks;
-};
-
-export const blogDatasFetcher = async (): Promise<any> => {
-  const serverRes = await fetch(
-    `${SERVER_API_URL}/landing-page?populate[0]=blogs&populate[1]=blogs.image`
-  );
-  const { data } = await serverRes.json();
-  return data.attributes.blogs;
-};
+export default QUERY;

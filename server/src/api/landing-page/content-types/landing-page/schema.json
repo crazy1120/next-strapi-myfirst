@@ -4,35 +4,65 @@
   "info": {
     "singularName": "landing-page",
     "pluralName": "landing-pages",
-    "displayName": "LandingPage",
+    "displayName": "landing-page",
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "heroes": {
-      "type": "component",
-      "repeatable": true,
-      "component": "section.single-part",
-      "required": true
-    },
-    "blocks": {
-      "type": "component",
-      "repeatable": true,
-      "component": "section.single-part",
-      "required": true
-    },
-    "blogs": {
-      "type": "component",
-      "repeatable": true,
-      "component": "section.blog-part",
-      "required": true
-    },
-    "title": {
+    "page_title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "page_desc": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "heroes_section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.unit-component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "blogs_section": {
+      "displayName": "blog-component",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.blog-component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "products_section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.unit-component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
