@@ -4,13 +4,13 @@ import { useSelector } from "react-redux";
 
 import NavbarSubmenu from "./navbar-submenu";
 import * as Links from "../links";
-import { COMMON } from "@/utils/constants";
+import { NAVBAR } from "@/utils/constants";
 
 const Navbar = ({ open }: { open: boolean }) => {
   const { type }: { type: string } = useSelector(
     (state: { device: { type: string } }) => state.device
   );
-  const { t } = useTranslation(COMMON);
+  const { t } = useTranslation(NAVBAR);
 
   return (
     <ul
@@ -26,21 +26,24 @@ const Navbar = ({ open }: { open: boolean }) => {
         title={t("audio")}
         comp={<Links.Audio prefix={"navbar"} />}
       />
-      <NavbarSubmenu title="Camera" comp={<Links.Camera prefix={"navbar"} />} />
       <NavbarSubmenu
-        title="Drawing"
+        title={t("camera")}
+        comp={<Links.Camera prefix={"navbar"} />}
+      />
+      <NavbarSubmenu
+        title={t("drawing")}
         comp={<Links.Drawing prefix={"navbar"} />}
       />
       <NavbarSubmenu
-        title="WatchPhone"
+        title={t("watchphone")}
         comp={<Links.WatchPhone prefix={"navbar"} />}
       />
       <NavbarSubmenu
-        title="Subscription"
+        title={t("subscription")}
         comp={<Links.Subscription prefix={"navbar"} />}
       />
       <li>
-        <Link href={"/circle"}>Circle</Link>
+        <Link href={"/circle"}>{t("circle")}</Link>
       </li>
       {/* Language set dropdown */}
       <NavbarSubmenu
@@ -55,7 +58,7 @@ const Navbar = ({ open }: { open: boolean }) => {
           className={`bg-purple text-white flex justify-center hover:bg-green px-5 rounded-[20px] ${
             type !== "laptop" ? "py-2.5 w-full" : "py-1.5"
           }`}>
-          Store
+          {t("store")}
         </Link>
       </li>
     </ul>

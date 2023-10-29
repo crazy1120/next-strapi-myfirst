@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next";
+import { COMMON } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
@@ -8,8 +10,9 @@ interface BlockProps {
 }
 
 const Product: React.FC<BlockProps> = ({ left = false, info }) => {
+  const { t } = useTranslation(COMMON);
   const { title, desc, link, image } = info;
-  const link_text = info.link_text || "View Products";
+  const link_text = info.link_text || t("view_products");
   const { url: imageURL } = image.data.attributes;
 
   const { type }: { type: string } = useSelector(

@@ -1,12 +1,4 @@
 {
-  "en": "English",
-  "zh": "Chinese",
-  "change_locale": "Language",
-  "current_locale": "Current locale",
   "view_products": "View Products",
-  "what's_new": "What's New",
-  "audio": "Audio",
-  "myfirst_carebuds": "myFirst CareBuds",
-  "myfirst_wireless_lite": "myFirst Headphones BC Wireless Lite",
-  "myfirst_wireless": "myFirst Headphones BC Wireless"
+  "what's_new": "What's New"
 }

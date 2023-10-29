@@ -7,7 +7,7 @@ import Query from "@/components/query";
 import { LANDING_PAGE_QUERY } from "@/utils/fetchers";
 import Layout from "@/components/layout";
 import { Blogs, Heroes, Products } from "@/components/landing";
-import { COMMON } from "@/utils/constants";
+import { COMMON, NAVBAR } from "@/utils/constants";
 
 type LandingPageProps = PageMetaData & {
   heroes_section: LinkDescComponent[];
@@ -41,7 +41,7 @@ const LandingPage: NextPage = () => {
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale!, [COMMON])),
+    ...(await serverSideTranslations(locale!, [COMMON, NAVBAR])),
   },
 });
 

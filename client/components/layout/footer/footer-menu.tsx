@@ -1,4 +1,7 @@
+import { useTranslation } from "next-i18next";
+
 import * as Links from "../links";
+import { NAVBAR } from "@/utils/constants";
 
 interface FooterSubmenuProps {
   title: string;
@@ -14,35 +17,45 @@ const FooterSubmenu: React.FC<FooterSubmenuProps> = ({ title, comp }) => {
   );
 };
 
-const FooterMenu: React.FC = () => (
-  <ul className="flex flex-wrap pt-[10px] pb-20 px-[30px] lg:px-0 lg:pt-10 border-b-[1px] border-white border-opacity-50">
-    <FooterSubmenu title={"Audio"} comp={<Links.Audio prefix={"footer"} />} />
-    <FooterSubmenu title={"Camera"} comp={<Links.Camera prefix={"footer"} />} />
-    <FooterSubmenu
-      title={"Drawing"}
-      comp={<Links.Drawing prefix={"footer"} />}
-    />
-    <FooterSubmenu
-      title={"WatchPhone"}
-      comp={<Links.WatchPhone prefix={"footer"} />}
-    />
-    <FooterSubmenu
-      title={"Stay Connected"}
-      comp={<Links.StayConnected prefix={"footer"} />}
-    />
-    <FooterSubmenu
-      title={"myFirst FreeSIM"}
-      comp={<Links.MyFirstFreeSIM prefix={"footer"} />}
-    />
-    <FooterSubmenu
-      title={"Support"}
-      comp={<Links.Support prefix={"footer"} />}
-    />
-    <FooterSubmenu
-      title={"Company"}
-      comp={<Links.Company prefix={"footer"} />}
-    />
-  </ul>
-);
+const FooterMenu: React.FC = () => {
+  const { t } = useTranslation(NAVBAR);
+
+  return (
+    <ul className="flex flex-wrap pt-[10px] pb-20 px-[30px] lg:px-0 lg:pt-10 border-b-[1px] border-white border-opacity-50">
+      <FooterSubmenu
+        title={t("audio")}
+        comp={<Links.Audio prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={t("camera")}
+        comp={<Links.Camera prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={t("drawing")}
+        comp={<Links.Drawing prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={t("watchphone")}
+        comp={<Links.WatchPhone prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={t("stay_connected")}
+        comp={<Links.StayConnected prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={`myFirst ${t("freesim")}`}
+        comp={<Links.MyFirstFreeSIM prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={t("support")}
+        comp={<Links.Support prefix={"footer"} />}
+      />
+      <FooterSubmenu
+        title={t("company")}
+        comp={<Links.Company prefix={"footer"} />}
+      />
+    </ul>
+  );
+};
 
 export default FooterMenu;

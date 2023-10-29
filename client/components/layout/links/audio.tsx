@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { LinksProps } from ".";
 import { useTranslation } from "next-i18next";
-import { COMMON } from "@/utils/constants";
+import { NAVBAR } from "@/utils/constants";
 
 const Lite = () => {
-  const { t } = useTranslation(COMMON);
+  const { t } = useTranslation(NAVBAR);
 
   return (
     <li>
@@ -16,7 +16,7 @@ const Lite = () => {
 };
 
 const AudioLinks: React.FC<LinksProps> = ({ prefix }) => {
-  const { t } = useTranslation(COMMON);
+  const { t } = useTranslation(NAVBAR);
 
   return (
     <ul className={`${prefix}-submenu`}>

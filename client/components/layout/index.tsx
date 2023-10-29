@@ -42,7 +42,6 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="flex flex-col min-h-screen">
         <Header />
