@@ -110,16 +110,16 @@ insert  into `admin_permissions`(`id`,`action`,`action_parameters`,`subject`,`pr
 (67,'admin::transfer.tokens.update','{}',NULL,'{}','[]','2023-10-26 16:06:12.674000','2023-10-26 16:06:12.674000',NULL,NULL),
 (68,'admin::transfer.tokens.regenerate','{}',NULL,'{}','[]','2023-10-26 16:06:12.679000','2023-10-26 16:06:12.679000',NULL,NULL),
 (69,'admin::transfer.tokens.delete','{}',NULL,'{}','[]','2023-10-26 16:06:12.684000','2023-10-26 16:06:12.684000',NULL,NULL),
-(136,'plugin::content-manager.explorer.create','{}','api::post.post','{\"fields\":[\"title\",\"cover\"],\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.785000','2023-10-27 15:44:09.785000',NULL,NULL),
-(137,'plugin::content-manager.explorer.read','{}','api::post.post','{\"fields\":[\"title\",\"cover\"],\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.792000','2023-10-27 15:44:09.792000',NULL,NULL),
-(138,'plugin::content-manager.explorer.update','{}','api::post.post','{\"fields\":[\"title\",\"cover\"],\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.798000','2023-10-27 15:44:09.798000',NULL,NULL),
-(139,'plugin::content-manager.explorer.delete','{}','api::post.post','{\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.804000','2023-10-27 15:44:09.804000',NULL,NULL),
-(140,'plugin::content-manager.explorer.publish','{}','api::post.post','{\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.809000','2023-10-27 15:44:09.809000',NULL,NULL),
-(141,'plugin::content-manager.explorer.create','{}','api::landing-page.landing-page','{\"fields\":[\"page_title\",\"page_desc\",\"heroes_section.title\",\"heroes_section.image\",\"heroes_section.desc\",\"heroes_section.link\",\"heroes_section.link_text\",\"heroes_section.mobile_image\",\"blogs_section.title\",\"blogs_section.image\",\"blogs_section.date\",\"blogs_section.link\",\"products_section.title\",\"products_section.image\",\"products_section.desc\",\"products_section.link\",\"products_section.link_text\",\"products_section.mobile_image\"],\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.814000','2023-10-27 15:44:09.814000',NULL,NULL),
-(142,'plugin::content-manager.explorer.read','{}','api::landing-page.landing-page','{\"fields\":[\"page_title\",\"page_desc\",\"heroes_section.title\",\"heroes_section.image\",\"heroes_section.desc\",\"heroes_section.link\",\"heroes_section.link_text\",\"heroes_section.mobile_image\",\"blogs_section.title\",\"blogs_section.image\",\"blogs_section.date\",\"blogs_section.link\",\"products_section.title\",\"products_section.image\",\"products_section.desc\",\"products_section.link\",\"products_section.link_text\",\"products_section.mobile_image\"],\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.820000','2023-10-27 15:44:09.820000',NULL,NULL),
-(143,'plugin::content-manager.explorer.update','{}','api::landing-page.landing-page','{\"fields\":[\"page_title\",\"page_desc\",\"heroes_section.title\",\"heroes_section.image\",\"heroes_section.desc\",\"heroes_section.link\",\"heroes_section.link_text\",\"heroes_section.mobile_image\",\"blogs_section.title\",\"blogs_section.image\",\"blogs_section.date\",\"blogs_section.link\",\"products_section.title\",\"products_section.image\",\"products_section.desc\",\"products_section.link\",\"products_section.link_text\",\"products_section.mobile_image\"],\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.825000','2023-10-27 15:44:09.825000',NULL,NULL),
-(144,'plugin::content-manager.explorer.delete','{}','api::landing-page.landing-page','{\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.830000','2023-10-27 15:44:09.830000',NULL,NULL),
-(145,'plugin::content-manager.explorer.publish','{}','api::landing-page.landing-page','{\"locales\":[\"en\",\"zh-Hans-SG\",\"zh\"]}','[]','2023-10-27 15:44:09.839000','2023-10-27 15:44:09.839000',NULL,NULL);
+(136,'plugin::content-manager.explorer.create','{}','api::post.post','{\"fields\":[\"title\",\"cover\"],\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.074000','2023-10-29 02:43:58.074000',NULL,NULL),
+(137,'plugin::content-manager.explorer.read','{}','api::post.post','{\"fields\":[\"title\",\"cover\"],\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.083000','2023-10-29 02:43:58.083000',NULL,NULL),
+(138,'plugin::content-manager.explorer.update','{}','api::post.post','{\"fields\":[\"title\",\"cover\"],\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.090000','2023-10-29 02:43:58.090000',NULL,NULL),
+(139,'plugin::content-manager.explorer.delete','{}','api::post.post','{\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.096000','2023-10-29 02:43:58.096000',NULL,NULL),
+(140,'plugin::content-manager.explorer.publish','{}','api::post.post','{\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.102000','2023-10-29 02:43:58.102000',NULL,NULL),
+(141,'plugin::content-manager.explorer.create','{}','api::landing-page.landing-page','{\"fields\":[\"page_title\",\"page_desc\",\"heroes_section.title\",\"heroes_section.image\",\"heroes_section.desc\",\"heroes_section.link\",\"heroes_section.link_text\",\"heroes_section.mobile_image\",\"blogs_section.title\",\"blogs_section.image\",\"blogs_section.date\",\"blogs_section.link\",\"products_section.title\",\"products_section.image\",\"products_section.desc\",\"products_section.link\",\"products_section.link_text\",\"products_section.mobile_image\"],\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.107000','2023-10-29 02:43:58.107000',NULL,NULL),
+(142,'plugin::content-manager.explorer.read','{}','api::landing-page.landing-page','{\"fields\":[\"page_title\",\"page_desc\",\"heroes_section.title\",\"heroes_section.image\",\"heroes_section.desc\",\"heroes_section.link\",\"heroes_section.link_text\",\"heroes_section.mobile_image\",\"blogs_section.title\",\"blogs_section.image\",\"blogs_section.date\",\"blogs_section.link\",\"products_section.title\",\"products_section.image\",\"products_section.desc\",\"products_section.link\",\"products_section.link_text\",\"products_section.mobile_image\"],\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.114000','2023-10-29 02:43:58.114000',NULL,NULL),
+(143,'plugin::content-manager.explorer.update','{}','api::landing-page.landing-page','{\"fields\":[\"page_title\",\"page_desc\",\"heroes_section.title\",\"heroes_section.image\",\"heroes_section.desc\",\"heroes_section.link\",\"heroes_section.link_text\",\"heroes_section.mobile_image\",\"blogs_section.title\",\"blogs_section.image\",\"blogs_section.date\",\"blogs_section.link\",\"products_section.title\",\"products_section.image\",\"products_section.desc\",\"products_section.link\",\"products_section.link_text\",\"products_section.mobile_image\"],\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.121000','2023-10-29 02:43:58.121000',NULL,NULL),
+(144,'plugin::content-manager.explorer.delete','{}','api::landing-page.landing-page','{\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.126000','2023-10-29 02:43:58.126000',NULL,NULL),
+(145,'plugin::content-manager.explorer.publish','{}','api::landing-page.landing-page','{\"locales\":[\"en\",\"zh\"]}','[]','2023-10-29 02:43:58.133000','2023-10-29 02:43:58.133000',NULL,NULL);
 
 /*Table structure for table `admin_permissions_role_links` */
 
@@ -137,7 +137,7 @@ CREATE TABLE `admin_permissions_role_links` (
   KEY `admin_permissions_role_links_order_inv_fk` (`permission_order`),
   CONSTRAINT `admin_permissions_role_links_fk` FOREIGN KEY (`permission_id`) REFERENCES `admin_permissions` (`id`) ON DELETE CASCADE,
   CONSTRAINT `admin_permissions_role_links_inv_fk` FOREIGN KEY (`role_id`) REFERENCES `admin_roles` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=166 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=176 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `admin_permissions_role_links` */
 
@@ -211,16 +211,16 @@ insert  into `admin_permissions_role_links`(`id`,`permission_id`,`role_id`,`perm
 (67,67,1,55),
 (68,68,1,56),
 (69,69,1,57),
-(156,136,1,58),
-(157,137,1,59),
-(158,138,1,60),
-(159,139,1,61),
-(160,140,1,62),
-(161,141,1,63),
-(162,142,1,64),
-(163,143,1,65),
-(164,144,1,66),
-(165,145,1,67);
+(166,136,1,58),
+(167,137,1,59),
+(168,138,1,60),
+(169,139,1,61),
+(170,140,1,62),
+(171,141,1,63),
+(172,142,1,64),
+(173,143,1,65),
+(174,144,1,66),
+(175,145,1,67);
 
 /*Table structure for table `admin_roles` */
 
@@ -375,14 +375,14 @@ insert  into `components_components_unit_components`(`id`,`title`,`desc`,`link`,
 (35,'Insta 2','带有额外自拍镜头的即时打印相机','/myfirst-camera-insta-2',NULL),
 (36,'Camera 3','让您孩子的摄影更上一层楼','/myfirst-camera-3',NULL),
 (37,'myFirst 护理芽','全球首款智能透明模式真正的儿童无线立体声耳机','/myfirst-carebuds',NULL),
-(38,'myFirst Fone S3','4G 纤薄方形屏幕手表手机，集成 myFirst Circle','/myfirst-fone-s3',NULL),
-(39,'Insta Wi','创建和打印令人惊叹的标签','/myfirst-camera-insta-wi',NULL),
+(38,'myFirst 手机 S3','4G 纤薄方形屏幕手表手机，集成 myFirst 循环','/myfirst-fone-s3',NULL),
+(39,'即时相机 Wi','创建和打印令人惊叹的标签','/myfirst-camera-insta-wi',NULL),
 (40,'BC 无线精简版','儿童无线骨传导耳机','/myfirst-headphones-bc-wireless-lite',NULL),
 (41,'保持联系','为您的孩子提供无限数据和语音通话','/stay-connected','了解更多'),
 (42,'素描本','只需简单的点击即可保存您孩子难忘的作品','/myfist-sketch-book',NULL),
 (43,'3d笔 制作','创建 3D 模型。 让您的图画栩栩如生','/myfirst-3dpen-make',NULL),
-(44,'Insta 2','带有额外自拍镜头的即时打印相机','/myfirst-camera-insta-2',NULL),
-(45,'Camera 3','让您孩子的摄影更上一层楼','/myfirst-camera-3',NULL);
+(44,'即时相机 2','带有额外自拍镜头的即时打印相机','/myfirst-camera-insta-2',NULL),
+(45,'相机 3','让您孩子的摄影更上一层楼','/myfirst-camera-3',NULL);
 
 /*Table structure for table `files` */
 
@@ -542,7 +542,7 @@ CREATE TABLE `files_related_morphs` (
   KEY `files_related_morphs_order_index` (`order`),
   KEY `files_related_morphs_id_column_index` (`related_id`),
   CONSTRAINT `files_related_morphs_fk` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=180 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `files_related_morphs` */
 
@@ -582,22 +582,22 @@ insert  into `files_related_morphs`(`id`,`file_id`,`related_id`,`related_type`,`
 (129,6,34,'components.unit-component','image',1),
 (130,8,35,'components.unit-component','image',1),
 (131,7,36,'components.unit-component','image',1),
-(132,5,37,'components.unit-component','image',1),
-(133,43,37,'components.unit-component','mobile_image',1),
-(134,9,38,'components.unit-component','image',1),
-(135,10,39,'components.unit-component','image',1),
-(136,13,40,'components.unit-component','image',1),
-(137,14,41,'components.unit-component','image',1),
-(138,12,25,'components.blog-component','image',1),
-(139,12,26,'components.blog-component','image',1),
-(140,12,27,'components.blog-component','image',1),
-(141,12,28,'components.blog-component','image',1),
-(142,12,29,'components.blog-component','image',1),
-(143,12,30,'components.blog-component','image',1),
-(144,11,42,'components.unit-component','image',1),
-(145,6,43,'components.unit-component','image',1),
-(146,8,44,'components.unit-component','image',1),
-(147,7,45,'components.unit-component','image',1);
+(164,5,37,'components.unit-component','image',1),
+(165,43,37,'components.unit-component','mobile_image',1),
+(166,9,38,'components.unit-component','image',1),
+(167,10,39,'components.unit-component','image',1),
+(168,13,40,'components.unit-component','image',1),
+(169,14,41,'components.unit-component','image',1),
+(170,12,25,'components.blog-component','image',1),
+(171,12,26,'components.blog-component','image',1),
+(172,12,27,'components.blog-component','image',1),
+(173,12,28,'components.blog-component','image',1),
+(174,12,29,'components.blog-component','image',1),
+(175,12,30,'components.blog-component','image',1),
+(176,11,42,'components.unit-component','image',1),
+(177,6,43,'components.unit-component','image',1),
+(178,8,44,'components.unit-component','image',1),
+(179,7,45,'components.unit-component','image',1);
 
 /*Table structure for table `i18n_locale` */
 
@@ -622,7 +622,6 @@ CREATE TABLE `i18n_locale` (
 
 insert  into `i18n_locale`(`id`,`name`,`code`,`created_at`,`updated_at`,`created_by_id`,`updated_by_id`) values 
 (1,'English (en)','en','2023-10-26 16:06:12.002000','2023-10-26 16:06:12.002000',NULL,NULL),
-(3,'zh-Hans-SG','zh-Hans-SG','2023-10-27 09:00:08.108000','2023-10-27 15:03:29.142000',1,1),
 (5,'Chinese (zh)','zh','2023-10-27 15:44:09.687000','2023-10-27 15:44:09.687000',1,1);
 
 /*Table structure for table `landing_pages` */
@@ -650,8 +649,7 @@ CREATE TABLE `landing_pages` (
 
 insert  into `landing_pages`(`id`,`page_title`,`page_desc`,`created_at`,`updated_at`,`published_at`,`created_by_id`,`updated_by_id`,`locale`) values 
 (1,'myFirst | Best Products & Gifts For Kids from Age 4 & Above','Explore the new era of technology designed specifically for kids. Shop watch phone, drawing tablet, instant print camera, and many more.','2023-10-27 03:28:33.132000','2023-10-27 15:44:26.277000','2023-10-27 15:32:12.643000',1,1,'en'),
-(2,'myFirst | 适合 4 岁及以上儿童的最佳产品和礼物','探索专为儿童设计的新科技时代。 购买手表手机、绘图板、即时打印相机等。','2023-10-27 15:10:30.369000','2023-10-27 15:44:26.288000','2023-10-27 15:14:11.739000',1,1,'zh-Hans-SG'),
-(3,'myFirst | 适合 4 岁及以上儿童的最佳产品和礼物','探索专为儿童设计的新科技时代。 购买手表手机、绘图板、即时打印相机等。','2023-10-27 15:44:26.199000','2023-10-27 15:44:38.237000','2023-10-27 15:44:38.234000',1,1,'zh');
+(3,'myFirst | 适合 4 岁及以上儿童的最佳产品和礼物','探索专为儿童设计的新科技时代。 购买手表手机、绘图板、即时打印相机等。','2023-10-27 15:44:26.199000','2023-10-30 09:14:08.700000','2023-10-27 15:44:38.234000',1,1,'zh');
 
 /*Table structure for table `landing_pages_components` */
 
@@ -670,7 +668,7 @@ CREATE TABLE `landing_pages_components` (
   KEY `landing_pages_component_type_index` (`component_type`),
   KEY `landing_pages_entity_fk` (`entity_id`),
   CONSTRAINT `landing_pages_entity_fk` FOREIGN KEY (`entity_id`) REFERENCES `landing_pages` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `landing_pages_components` */
 
@@ -690,32 +688,17 @@ insert  into `landing_pages_components`(`id`,`entity_id`,`component_id`,`compone
 (75,1,16,'components.unit-component','products_section',2),
 (76,1,17,'components.unit-component','products_section',3),
 (77,1,18,'components.unit-component','products_section',4),
-(108,2,28,'components.unit-component','heroes_section',3),
-(109,2,29,'components.unit-component','heroes_section',6),
-(110,2,30,'components.unit-component','heroes_section',8),
-(111,2,31,'components.unit-component','heroes_section',10),
-(112,2,32,'components.unit-component','heroes_section',11),
-(113,2,19,'components.blog-component','blogs_section',1),
-(114,2,20,'components.blog-component','blogs_section',2),
-(115,2,21,'components.blog-component','blogs_section',4),
-(116,2,22,'components.blog-component','blogs_section',5),
-(117,2,23,'components.blog-component','blogs_section',7),
-(118,2,24,'components.blog-component','blogs_section',9),
-(119,2,33,'components.unit-component','products_section',1),
-(120,2,34,'components.unit-component','products_section',2),
-(121,2,35,'components.unit-component','products_section',3),
-(122,2,36,'components.unit-component','products_section',4),
-(123,3,37,'components.unit-component','heroes_section',1),
-(124,3,38,'components.unit-component','heroes_section',2),
-(125,3,39,'components.unit-component','heroes_section',3),
-(126,3,40,'components.unit-component','heroes_section',4),
-(127,3,41,'components.unit-component','heroes_section',5),
+(123,3,37,'components.unit-component','heroes_section',2),
+(124,3,38,'components.unit-component','heroes_section',5),
+(125,3,39,'components.unit-component','heroes_section',9),
+(126,3,40,'components.unit-component','heroes_section',12),
+(127,3,41,'components.unit-component','heroes_section',13),
 (128,3,25,'components.blog-component','blogs_section',1),
-(129,3,26,'components.blog-component','blogs_section',2),
-(130,3,27,'components.blog-component','blogs_section',3),
-(131,3,28,'components.blog-component','blogs_section',4),
-(132,3,29,'components.blog-component','blogs_section',5),
-(133,3,30,'components.blog-component','blogs_section',6),
+(129,3,26,'components.blog-component','blogs_section',3),
+(130,3,27,'components.blog-component','blogs_section',4),
+(131,3,28,'components.blog-component','blogs_section',6),
+(132,3,29,'components.blog-component','blogs_section',8),
+(133,3,30,'components.blog-component','blogs_section',10),
 (134,3,42,'components.unit-component','products_section',1),
 (135,3,43,'components.unit-component','products_section',2),
 (136,3,44,'components.unit-component','products_section',3),
@@ -742,12 +725,8 @@ CREATE TABLE `landing_pages_localizations_links` (
 /*Data for the table `landing_pages_localizations_links` */
 
 insert  into `landing_pages_localizations_links`(`id`,`landing_page_id`,`inv_landing_page_id`,`landing_page_order`) values 
-(1,2,1,2),
-(2,1,2,2),
 (3,3,1,1),
-(4,3,2,2),
-(5,1,3,1),
-(7,2,3,1);
+(5,1,3,1);
 
 /*Table structure for table `posts` */
 
@@ -772,9 +751,7 @@ CREATE TABLE `posts` (
 /*Data for the table `posts` */
 
 insert  into `posts`(`id`,`title`,`created_at`,`updated_at`,`published_at`,`created_by_id`,`updated_by_id`,`locale`) values 
-(1,'a','2023-10-26 19:14:40.292000','2023-10-27 09:01:19.456000','2023-10-26 19:22:06.875000',1,1,'en'),
-(2,'我','2023-10-27 09:09:05.969000','2023-10-27 09:09:06.921000','2023-10-27 09:09:06.917000',1,1,'zh-Hans-SG'),
-(3,'我','2023-10-27 09:10:11.502000','2023-10-27 09:10:51.508000','2023-10-27 09:10:51.504000',1,1,'zh-Hans-SG');
+(1,'a','2023-10-26 19:14:40.292000','2023-10-27 09:01:19.456000','2023-10-26 19:22:06.875000',1,1,'en');
 
 /*Table structure for table `posts_localizations_links` */
 
