@@ -1,12 +1,23 @@
 import gql from "graphql-tag";
+import localeConverter from "./localeConverter";
 
-const QUERY = ({ locale }: Locale) => gql`
+const QUERY = ({ locale }: Locale) => {
+  const convertedLocale = localeConverter(locale);
+
+  return gql`
   query {
-    landingPage(locale:"${locale}") {
+    landingPage(locale:"${convertedLocale}") {
       data {
         attributes {
           page_title
           page_desc
+          og_image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }          
           heroes_section {
             title
             desc
@@ -57,5 +68,6 @@ const QUERY = ({ locale }: Locale) => gql`
     }
   }
 `;
+};
 
 export default QUERY;

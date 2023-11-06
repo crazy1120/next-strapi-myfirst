@@ -6,7 +6,11 @@ import NavbarSubmenu from "./navbar-submenu";
 import * as Links from "../links";
 import { NAVBAR } from "@/utils/constants";
 
-const Navbar = ({ open }: { open: boolean }) => {
+const Navbar: React.FC<{
+  open: boolean;
+  isActive: boolean[];
+  updateIsActive: (index: number) => void;
+}> = ({ open, isActive, updateIsActive }) => {
   const { type }: { type: string } = useSelector(
     (state: { device: { type: string } }) => state.device
   );
@@ -25,31 +29,36 @@ const Navbar = ({ open }: { open: boolean }) => {
       <NavbarSubmenu
         title={t("audio")}
         comp={<Links.Audio prefix={"navbar"} />}
+        isActive={isActive[0]}
+        onClick={() => updateIsActive(0)}
       />
       <NavbarSubmenu
         title={t("camera")}
         comp={<Links.Camera prefix={"navbar"} />}
+        isActive={isActive[1]}
+        onClick={() => updateIsActive(1)}
       />
       <NavbarSubmenu
         title={t("drawing")}
         comp={<Links.Drawing prefix={"navbar"} />}
+        isActive={isActive[2]}
+        onClick={() => updateIsActive(2)}
       />
       <NavbarSubmenu
         title={t("watchphone")}
         comp={<Links.WatchPhone prefix={"navbar"} />}
+        isActive={isActive[3]}
+        onClick={() => updateIsActive(3)}
       />
       <NavbarSubmenu
         title={t("subscription")}
         comp={<Links.Subscription prefix={"navbar"} />}
+        isActive={isActive[4]}
+        onClick={() => updateIsActive(4)}
       />
       <li>
         <Link href={"/circle"}>{t("circle")}</Link>
       </li>
-      {/* Language set dropdown */}
-      <NavbarSubmenu
-        title={t("change_locale")}
-        comp={<Links.Language prefix={"navbar"} />}
-      />
 
       <li className={`${type !== "laptop" && "p-5"}`}>
         <Link

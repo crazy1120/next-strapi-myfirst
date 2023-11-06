@@ -1,17 +1,26 @@
 import { ReactNode, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import Head from "next/head";
 
 import Footer from "./footer";
 import Header from "./header";
 import { actions } from "@/utils/store";
+import { NextSeo } from "next-seo";
 
 interface LayoutProps {
-  title: string;
   children: ReactNode;
+  title?: string;
+  desc?: string;
+  og?: object;
+  canonical?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ title, children }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title,
+  desc,
+  og,
+  canonical,
+}) => {
   const dispatch = useDispatch();
   const { setType } = actions;
 
@@ -39,16 +48,19 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
   }, [dispatch]);
 
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1 bg-white">{children}</main>
-        <Footer />
-      </div>
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1 bg-white">
+        <NextSeo
+          title={title}
+          description={desc}
+          openGraph={og}
+          canonical={canonical}
+        />
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 };
 

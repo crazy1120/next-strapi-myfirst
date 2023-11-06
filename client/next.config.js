@@ -8,8 +8,8 @@ const nextConfig = {
     SERVER_GRAPHQL_URL: "http://localhost:1337/graphql",
 
     // Remote Development Env
-    // SERVER_ROOT_URL: "http://[IP or Staging domain]:1337",
-    // SERVER_GRAPHQL_URL: "http://[IP or Staging domain]:1337/graphql",
+    // SERVER_ROOT_URL: "http://45.142.214.167:1337",
+    // SERVER_GRAPHQL_URL: "http://45.142.214.167:1337/graphql",
 
     // Production Env
     // SERVER_ROOT_URL: "https://[Real domain]",
@@ -18,7 +18,7 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ["res.cloudinary.com", "images.unsplash.com"],
   },
 };
 

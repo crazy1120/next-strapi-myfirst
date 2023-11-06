@@ -289,3 +289,11 @@
     display: none;
   }
 }
+
+.underline-parent {
+  p {
+    a {
+      text-decoration: underline;
+    }
+  }
+}

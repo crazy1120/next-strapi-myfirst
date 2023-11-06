@@ -14,8 +14,13 @@ const SubscriptionLinks: React.FC<LinksProps> = ({ prefix }) => {
         </Link>
       </li>
       <li>
-        <Link href={"/"} locale={"zh"}>
-          汉语
+        <Link href={"/"} locale={"tw"}>
+          汉语(台湾)
+        </Link>
+      </li>
+      <li>
+        <Link href={"/"} locale={"es"}>
+          Espanol
         </Link>
       </li>
     </ul>
